@@ -10,7 +10,6 @@
 </head>
 <body>
 		<?php
-		
 		$login = "data.txt";
 		$contents = file_get_contents($login);
 		$loginInfo = explode(":", $contents);
@@ -23,22 +22,11 @@
 
 		if($username==$user && $password==$pass)
 		{
-		echo "Welcome Admin";
+		echo "Welcome Admin! How are you? :)";
 		}
 		else{
-			echo "Access Denied";
-		}
-			
-		
+			echo "Access Denied!";
+		}		
 		?>
-	<div class='container' style='border:1px solid #d8d8d8'>
-	<h1>Please Login to Continue</h1>
-    <form id="rform" name="loginform" method='post' action="<?php echo $_SERVER['PHP_SELF'];?>">
-        <input type='text' name='loginuser' class='form-control' placeholder='Username'><br>
-        <input type="password" name="loginpass" class='form-control' placeholder='Password'><br>
-        <input type='submit' name="login" value="login" class='btn btn-default'><br><br>
-    </form>
-	</div>
-	<script src="yo.js"></script>
 </body>
 </html>
